@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Caveat } from "next/font/google";
 import HeaderSubnavGate from '@/components/HeaderSubnavGate';
 import Footer from '@/components/Footer';
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 const caveat = Caveat({ weight: "700", subsets: ["latin"] });
@@ -150,6 +151,7 @@ export default function RootLayout({
         <HeaderSubnavGate />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
